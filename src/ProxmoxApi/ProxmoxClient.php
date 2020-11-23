@@ -82,7 +82,7 @@ class ProxmoxClient
 
             case(self::REQUEST_MENTHOD_PUT):
                 curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($params));
-                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "set");
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
                 break;
 
             case (self::REQUEST_MENTHOD_DELETE):
