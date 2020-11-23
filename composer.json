@@ -1,5 +1,5 @@
 {
-    "name": "armd-pro/proxmox-api",
+    "name": "skildust/proxmox-api",
     "type": "library",
     "description": "Proxmox API for PHP",
     "keywords": ["proxmox", "proxmox api"],
@@ -9,6 +9,11 @@
             "name": "Arthur Ayvazov",
             "email": "armancho1@gmail.com",
             "homepage": "https://github.com/armd-pro/proxmox-api"
+        },
+        {
+            "name": "sKiLdUsT",
+            "email": "skil@skildust.com",
+            "homepage": "https://www.skildust.com"
         }
     ],
     "require": {
