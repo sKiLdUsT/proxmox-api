@@ -117,7 +117,7 @@ class ProxmoxClient
         $headers = [];
 
         foreach(preg_split("/\n/", trim(substr($resp, 0, $info['header_size']))) as $it) {
-            if(preg_match('#^HTTP/\d.\d\s+(\d+)\s+(.+)$#', $it, $m)) {
+            if(preg_match('#^HTTP\/\d.?\d?\s+(\d+)\s?(.+)?$#', $it, $m)) {
                 $headers['status'] = ['code' => intval($m[1]), 'msg' => $m[2]];
             } else if(preg_match('#^([^:]+):\s+(.*)$#', $it, $m)) {
                 $headers[$m[1]] = $m[2];
