@@ -51,11 +51,12 @@ trait ProxmoxMethodsTrait
 
     /**
      * @param string $action
+     * @param array $params
      * @return mixed
      * @throws ProxmoxApiException
      */
-    public function delete($action) {
-        return $this->client()->request(ProxmoxClient::REQUEST_MENTHOD_DELETE, $this->pathNormalize($action));
+    public function delete($action, array $params = []) {
+        return $this->client()->request(ProxmoxClient::REQUEST_MENTHOD_DELETE, $this->pathNormalize($action), $params);
     }
 
     private function pathNormalize($action) {
