@@ -86,6 +86,7 @@ class ProxmoxClient
                 break;
 
             case (self::REQUEST_MENTHOD_DELETE):
+                curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($params));
                 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "DELETE");
                 break;
 
